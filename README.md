@@ -78,7 +78,7 @@
         </tr>
         <tr>
             <td>timeOut</td>
-            <td>Typing time. it is timeout value for each letter. ie if its 0.1 first letter will get type in 0.1 seconds and secon will 0.2 and third...</td>
+            <td>Typing time. it is timeout value for each letter. i.g. if its 0.1 first letter will get type in 0.1 seconds and secon will 0.2 and third...</td>
             <td>0.2</td>
         </tr>
         <tr>
