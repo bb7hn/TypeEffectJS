@@ -1,7 +1,8 @@
 # Type Effect JS
+## Created by [Batuhan Özen](https://batuhanozen.com)
 ## How to use
 ### Quick Start
-- [Download](https://batuhanozen.com) the repo and go to examples.html
+- [Download](https://github.com/bb7hn/TypeEffectJS/archive/refs/heads/main.zip) the repo and go to examples.html
 ### Initialization
 - Download and require the css and js files
 ```html
