@@ -1,0 +1,30 @@
+.typeEffectContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.typeEffect{
+    position: relative;
+    width: auto;
+    padding-right: 2px;
+    color: var(--typeEffectColor);;
+}
+.typeEffect::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background-color: var(--typeEffectBlinkerColor);
+    animation: blink .65s ease-in-out infinite;
+}
+@keyframes blink {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
