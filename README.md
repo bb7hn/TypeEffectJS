@@ -83,17 +83,17 @@
         </tr>
         <tr>
             <td>forwards</td>
-            <td>If this is true. type effect wotk only once.</td>
+            <td>If this is true. type effect work only once.</td>
             <td>false</td>
         </tr>
         <tr>
             <td>color</td>
-            <td>This is a basic css color. you can set is hex rgb/rgba hsl color name etc. Sets the color of the text</td>
+            <td>This is a basic css color. you can set it as hex, rgb/rgba, hsl, color name etc. Sets the color of the text</td>
             <td>'black'</td>
         </tr>
         <tr>
             <td>blinkerColor</td>
-            <td>same with color. Sets the color of the blinker</td>
+            <td>Same with color but sets the color of the blinker</td>
             <td>'#000000' Value</td>
         </tr>
 </table>
