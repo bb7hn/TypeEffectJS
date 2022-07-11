@@ -95,5 +95,10 @@
         <td>Same with color but sets the color of the blinker</td>
         <td>'#000000' Value</td>
     </tr>
+    <tr>
+        <td>text</td>
+        <td>This is a string variable. if you set it it'll type it if you don't it'll try to get text from item's inner text.</td>
+        <td>'#000000' Value</td>
+    </tr>
 </table>
 <hr>

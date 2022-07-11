@@ -1,11 +1,18 @@
 let initializedTypeEffects = [];
 const typeEffect = (element, text, time_out = 0.2, forwards = false) => {
-  timeOut = 0;
+  let timeOut = 0;
+  let blinker = document.createElement('span');
+  blinker.innerText = '|';
+  blinker.classList.add('blinker');
+  blinker.style.setProperty('color','var(--typeEffectBlinkerColor)');
   element.innerHTML = "";
+  element.appendChild(blinker);
   [...text].forEach((letter) => {
     timeOut += time_out;
     setTimeout(() => {
+      blinker.remove();
       element.innerHTML += letter;
+      element.appendChild(blinker);
     }, timeOut * 1000);
   });
   setTimeout(() => {
@@ -15,14 +22,22 @@ const typeEffect = (element, text, time_out = 0.2, forwards = false) => {
   }, 5000);
 };
 const reverseTypeEffect = (element, text, time_out = 0.2) => {
-  timeOut = 0;
+  let timeOut = 0;
+  let blinker = document.createElement('span');
+  blinker.classList.add('blinker');
+  blinker.style.setProperty('color','var(--typeEffectBlinkerColor)');
   [...text].forEach((_, i) => {
     timeOut += time_out;
     setTimeout(() => {
+      blinker.remove();
       element.innerText = element.innerText.slice(0, -1);
+      element.appendChild(blinker);
     }, timeOut * 1000);
   });
+  element.appendChild(blinker);
   setTimeout(() => {
+    element.innerText='';
+    blinker.remove();
     typeEffect(element, text);
   }, 2500);
 };
@@ -33,6 +48,7 @@ const initTypeEffect = (params={}) => {
     forwards: params.forwards ? true : false,
     color: params.color ? params.color : "black",
     blinkerColor: params.blinkerColor ? params.blinkerColor : "#000",
+    text        : params.text?params.text:false
   };
   if (options.id) {
     let item = document.getElementById(options.id);
@@ -41,7 +57,7 @@ const initTypeEffect = (params={}) => {
     }
     item.style.setProperty("--typeEffectColor", options.color);
     item.style.setProperty("--typeEffectBlinkerColor", options.blinkerColor);
-    typeEffect(item, item.innerText, options.timeOut, options.forwards);
+    typeEffect(item, options.text?options.text:item.innerText, options.timeOut, options.forwards);
   } else {
     let items = document.querySelectorAll(".typeEffect");
     items.forEach((_) => {
@@ -51,7 +67,7 @@ const initTypeEffect = (params={}) => {
       initializedTypeEffects.push(_);
       _.style.setProperty("--typeEffectColor", options.color);
       _.style.setProperty("--typeEffectBlinkerColor", options.blinkerColor);
-      typeEffect(_, _.innerText, options.timeOut, options.forwards);
+      typeEffect(_, options.text?options.text:_.innerText, options.timeOut, options.forwards);
     });
   }
 };
