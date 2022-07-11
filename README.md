@@ -1,4 +1,4 @@
-# Type Effect JS
+# See the [demo](./exampe.html)
 ## Created by [Batuhan Özen](https://batuhanozen.com)
 ## How to use
 ### Quick Start
