@@ -1,4 +1,5 @@
 ## Created by [Batuhan Özen](https://batuhanozen.com)
+## [Demo](demo)
 ## How to use
 ### Quick Start
 - [Download](https://github.com/bb7hn/TypeEffectJS/archive/refs/heads/main.zip) the repo and go to examples.html
